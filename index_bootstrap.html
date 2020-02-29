@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>About Me</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index_bootstrap.html">Home</a>
+        </nav>
+        
+        
+        <div class="container">
+            <h1>Bodzianowski, Michal<small class="text-muted">- Software Dev and Tools</small></h1>
+            <p class="card card-body">I am wearing a green shirt, I almost like to code, and I'm pretty cool guy. I study Comp Sci because it pays well</p>
+            <br>
+        <div class="card">
+            <div class="card-header">
+                <h2>My Professional Profile</h2>
+            </div>
+            
+            <div class="card-body">
+                <img class ="rounded-circle"width="200" height="200" src="https://avatars2.githubusercontent.com/u/8655485?s=460&v=4"></img>
+                <br>
+                <button type="button" class="btn btn-light" href="http://github.com/ItsMichal">My github link</button>
+                
+            </div>  
+        </div>
+        <br>
+
+        <button type="button" class="btn btn-primary">Add Interest</button>
+        <br><br>
+
+        <script>
+            
+            function addTweet(x){
+                let parent = document.getElementById(x);
+                let rando = new Date().getTime();
+                let tweet = $(`<div class="card" id="tweet-`+rando+`">
+                <img class="card-img-top" src="data:image/png;base64,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" alt="kamil stoch">
+                <div class="card-body">
+                    <h5 class="card-title">Twitter</h5>
+                    <p class="card-text">This is a sample tweet...hooray!</p>
+                    
+                </div>
+                <button type="button" class="btn btn-danger" onclick="removeTweet('tweet-`+rando+`')">-</button>
+            </div>`);
+                tweet.appendTo(parent);
+            }
+            function removeTweet(x){
+                document.getElementById(x).remove();
+            }
+        </script>
+
+        <h3>My Interests</h3>
+        <div class="row">
+            <div class="card" style='width:32%'>
+                <img class="card-img-top" src="https://www.ispo.com/sites/default/files/styles/content_width_phone/public/2018-01/kamil1.jpg?itok=u4pDCgdl" alt="kamil stoch">
+                <div class="card-body" id="body-1">
+                    <h5 class="card-title">Skiing</h5>
+                    <p class="card-text">Skiing is super fun! I love all forms of skiing, and especially like watching ski jumping!</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addTweet('body-1')">+</button>
+            </div>
+            <div class="card col-xs-4" style='width:32%'>
+                <img class="card-img-top" src="https://s.yimg.com/ny/api/res/1.2/cdZkhnv8Je548lJSEqyEmA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-10/cb48edb0-f805-11e9-bdf3-742bb64756a4" alt="lewandowski">
+                <div class="card-body" id="body-2">
+                    <h5 class="card-title">Sports</h5>
+                    <p class="card-text">Skiing is super fun! I love all forms of skiing, and especially like watching ski jumping!</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addTweet('body-2')">+</button>
+            </div>
+            <div class="card col-xs-4" style='width:32%'>
+                <img class="card-img-top" src="https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/ATVPDKIKX0DER/A3LXDK8C7K12AO/0f2ea5ed-3771-4897-9251-8889b648c925._CR0,802,4204,2600_PT0_SX970__.jpg" alt="boss coffee">
+                <div class="card-body" id="body-3">
+                    <h5 class="card-title">Japan</h5>
+                    <p class="card-text">I love Japanese culture, especially their sweets and canned drinks. BOSSコーヒーはさいこです</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addTweet('body-3')">+</button>
+            </div>   
+        <br>
+        </div>
+        <br>
+
+        <h3>My Favorite Projects</h3>
+        <table class="table">
+        <thead>
+            <tr>
+                <th>Name of the Project</th>
+                <th>Technologies Used</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Michal.us</td>
+                <td>html, js, jekyll, github</td>
+            </tr>
+            <tr>
+                <td>casino</td>
+                <td>html, js</td>
+            </tr>
+            <tr>
+                <td>ohiseebot</td>
+                <td>html, nodejs</td>
+            </tr>
+        </table>
+    </tbody>
+    </div>
+    </body>
+    </html>
