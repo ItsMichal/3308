@@ -125,7 +125,7 @@ $(document).ready(function() {
                     '<img src="'+data.current.weather_icons[0]+'"><br>'+
                     data.location.region+ `'s Weather<br>
                     Temperature: ${temperature.toFixed(2)} F<br>
-                    Weather: ${data.current.weather_descriptions}
+                    Weather: ${data.current.weather_descriptions} <br>
                     Cloud Cover: ${data.current.cloudcover}<br>
                     Humidity: ${data.current.humidity}% <br>
                     Precipitation: ${data.current.precip} mm<br>
